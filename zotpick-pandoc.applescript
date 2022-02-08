@@ -20,7 +20,7 @@ else if zotRunning is "No endpoint found" then
 	end tell
 	error number -128
 else if zotRunning is "ready" then
-	set theReference to do shell script "/usr/bin/curl 'http://localhost:23119/better-bibtex/cayw?format=pandoc' 2>/dev/null; exit 0"
+	set theReference to do shell script "/usr/bin/curl 'http://localhost:23119/better-bibtex/cayw?format=pandoc&brackets=true' 2>/dev/null; exit 0"
 	try
 		repeat until application appName is frontmost
 			tell application appName to activate
